@@ -55,8 +55,7 @@ public class GameEnding : MonoBehaviour
         {
             if (doRestart)
             {
-                Debug.Log(doRestart);
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(1);
 
             }
             else

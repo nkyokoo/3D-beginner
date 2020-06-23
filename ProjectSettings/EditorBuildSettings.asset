@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 908baa829bfb3d74e9a3f397a1339b4a
   - enabled: 1
-    path: Assets/Scenes/MainScene.unity
-    guid: 2b9b888fe48ee8b459cab798e7ec10fa
+    path: Assets/Scenes/singeplayer.unity
+    guid: 4087bc811a433e54cb7045530810c708
+  - enabled: 1
+    path: Assets/Scenes/splitscreenmultiplayer.unity
+    guid: 25606362cfae0304ebee8382ce97e7ea
   m_configObjects: {}

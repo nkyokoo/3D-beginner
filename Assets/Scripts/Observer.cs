@@ -5,25 +5,26 @@ using UnityEngine;
 public class Observer : MonoBehaviour
 {
     public Transform player;
+    public Transform player2;
     public GameEnding gameEnding;
 
+    private GameObject targetPlayer;
     bool m_IsPlayerInRange;
 
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.transform == player)
+        if (other.transform == player || other.transform == player2)
         {
-            Debug.Log(other);
+            targetPlayer = other.gameObject;
             m_IsPlayerInRange = true;
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.transform == player)
+        if (other.transform == player || other.transform == player2)
         {
-            Debug.Log(other);
             m_IsPlayerInRange = false;
         }
     }
@@ -43,7 +44,7 @@ public class Observer : MonoBehaviour
                 {
                     Debug.Log(raycastHit.collider.transform);
                     Debug.Log(raycastHit);
-                    gameEnding.CaughtPlayer();
+                    gameEnding.CaughtPlayer(targetPlayer);
 
                 }
             }

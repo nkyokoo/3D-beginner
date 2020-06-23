@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-   public GameObject mainMenuCanvas;
-   public GameObject multiplayerMenuCanvas;
    public void startSingePlayer()
    {
       if (Application.genuine)
@@ -27,10 +25,23 @@ public class MainMenu : MonoBehaviour
       }
    }
    
-   public void showMultiplayerMenu()
+   public void start2player()
    {
-      mainMenuCanvas.SetActive(false);
-      multiplayerMenuCanvas.SetActive(true);
+      if (Application.genuine)
+      {
+         try
+         {
+            SceneManager.LoadScene(2);
+
+         }
+         catch (Exception e)
+         {
+            Console.WriteLine(e);
+            Application.Quit();
+
+         }
+
+      }
 
    }
    public void exitGame()

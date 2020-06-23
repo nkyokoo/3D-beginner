@@ -434,8 +434,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a5813328e65e9445803a2fba58dd26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenuCanvas: {fileID: 0}
-  multiplayerMenuCanvas: {fileID: 0}
 --- !u!1 &160818604
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,7 +818,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Local multiplayer
+  m_Text: 2 player
 --- !u!222 &456529737
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1050,8 +1048,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a5813328e65e9445803a2fba58dd26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenuCanvas: {fileID: 1734381027}
-  multiplayerMenuCanvas: {fileID: 3399825}
 --- !u!1 &793979720
 GameObject:
   m_ObjectHideFlags: 0
@@ -2179,7 +2175,7 @@ GameObject:
   - component: {fileID: 1832510042}
   - component: {fileID: 1832510046}
   m_Layer: 5
-  m_Name: multiplayer_btn
+  m_Name: 2player_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2249,7 +2245,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1832510046}
-        m_MethodName: showMultiplayerMenu
+        m_MethodName: start2player
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2308,8 +2304,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a5813328e65e9445803a2fba58dd26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenuCanvas: {fileID: 1734381027}
-  multiplayerMenuCanvas: {fileID: 3399825}
 --- !u!1 &1989035134
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,8 +9,8 @@ public class MenuScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey("escape") || (Input.GetButton("joystick 1 button 9") || Input.GetButton("joystick 2 button 9") ||
-                                    (Input.GetButton("joystick 1 button 7") || Input.GetButton("joystick 2 button 7"))))
+        if (Input.GetKey("escape") || (Input.GetKey("joystick 1 button 9") || Input.GetKey("joystick 2 button 9")) ||
+                                    (Input.GetKey("joystick 1 button 7") || Input.GetKey("joystick 2 button 7")))
         {
             MenuCanvas.SetActive(true);
             Time.timeScale = 0;

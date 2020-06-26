@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player1Movement : MonoBehaviour
 {
     public float turnSpeed = 20f;
+    public float thrust = 1.0f;
 
     Animator m_Animator;
     Rigidbody m_Rigidbody;
@@ -56,4 +57,12 @@ public class Player1Movement : MonoBehaviour
         m_Rigidbody.MovePosition(m_Rigidbody.position + m_Movement * m_Animator.deltaPosition.magnitude);
         m_Rigidbody.MoveRotation(m_Rotation);
     }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.name == "Player2")
+        {
+            m_Rigidbody.AddForce(transform.forward * thrust);
+        }
+    }
+
 }

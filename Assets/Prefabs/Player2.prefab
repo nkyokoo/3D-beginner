@@ -614,7 +614,7 @@ Transform:
   m_Children:
   - {fileID: 4542044882968383697}
   m_Father: {fileID: 4542044882968383709}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4542044882968087777
 GameObject:
@@ -893,122 +893,6 @@ Transform:
   m_Father: {fileID: 4542044882968383639}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4542044882968087795
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4542044882968383699}
-  - component: {fileID: 4542044882979586549}
-  m_Layer: 0
-  m_Name: JohnLemon
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!4 &4542044882968383699
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4542044882968087795}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4542044882968383709}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &4542044882979586549
-SkinnedMeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4542044882968087795}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a0f36fc0d25b946499ac2f95f2b6ab9b, type: 2}
-  - {fileID: 2100000, guid: ec8dc473ea10be74bada0165e17a99d9, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 4300000, guid: b44f3940c4940544a8c2c6aee5fa086f, type: 3}
-  m_Bones:
-  - {fileID: 4542044882968383697}
-  - {fileID: 4542044882968383633}
-  - {fileID: 4542044882968383635}
-  - {fileID: 4542044882968383731}
-  - {fileID: 4542044882968383701}
-  - {fileID: 4542044882968383703}
-  - {fileID: 4542044882968383685}
-  - {fileID: 4542044882968383739}
-  - {fileID: 4542044882968383729}
-  - {fileID: 4542044882968383681}
-  - {fileID: 4542044882968383687}
-  - {fileID: 4542044882968383717}
-  - {fileID: 4542044882968383719}
-  - {fileID: 4542044882968383735}
-  - {fileID: 4542044882968383711}
-  - {fileID: 4542044882968383695}
-  - {fileID: 4542044882968383689}
-  - {fileID: 4542044882968383691}
-  - {fileID: 4542044882968383637}
-  - {fileID: 4542044882968383741}
-  - {fileID: 4542044882968383725}
-  - {fileID: 4542044882968383727}
-  - {fileID: 4542044882968383721}
-  - {fileID: 4542044882968383733}
-  - {fileID: 4542044882968383705}
-  - {fileID: 4542044882968383693}
-  - {fileID: 4542044882968383683}
-  - {fileID: 4542044882968383723}
-  - {fileID: 4542044882968383743}
-  - {fileID: 4542044882968383715}
-  - {fileID: 4542044882968383713}
-  - {fileID: 4542044882968383707}
-  - {fileID: 4542044882968383737}
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 4542044882968383697}
-  m_AABB:
-    m_Center: {x: -0.3211945, y: -0.000323236, z: 0.0055948943}
-    m_Extent: {x: 0.71350014, y: 0.72880006, z: 0.21759997}
-  m_DirtyAABB: 0
 --- !u!1 &4542044882968087797
 GameObject:
   m_ObjectHideFlags: 0
@@ -1172,7 +1056,6 @@ Transform:
   m_LocalPosition: {x: -9.8, y: 0, z: -3.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4542044882968383699}
   - {fileID: 4542044882968383639}
   m_Father: {fileID: 0}
   m_RootOrder: 0

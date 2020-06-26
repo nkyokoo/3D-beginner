@@ -7,7 +7,7 @@ public class Observer : MonoBehaviour
     public Transform player;
     public Transform player2;
     public GameEnding gameEnding;
-
+    
     private GameObject targetPlayer;
     bool m_IsPlayerInRange;
 

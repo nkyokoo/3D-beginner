@@ -8,8 +8,10 @@ public class GameEnding : MonoBehaviour
     public float fadeDuration = 1f;
     public GameObject player;
     public GameObject player2;
-    public CanvasGroup exitBackgroundImageCanvasGroup;
-    public CanvasGroup caughtBackgroundImageCanvasGroup;
+    public CanvasGroup P1_ExitBackgroundImageCanvasGroup;
+    public CanvasGroup P1_CaughtBackgroundImageCanvasGroup;
+    public CanvasGroup P2_ExitBackgroundImageCanvasGroup;
+    public CanvasGroup P2_CaughtBackgroundImageCanvasGroup;
     public float displayImageDuration = 1f;
     public AudioSource exitAudio;
     public AudioSource caughtAudio;
@@ -40,14 +42,31 @@ public class GameEnding : MonoBehaviour
     void Update()
     {
         if(m_IsPlayerAtExit)
-        {    
-            EndLevel(exitBackgroundImageCanvasGroup, false, exitAudio, targetPlayer);
+        {
+            switch (targetPlayer.name)
+            {
+                case "Player1":
+                    EndLevel(P1_ExitBackgroundImageCanvasGroup, false, exitAudio, targetPlayer);
+                    break;
+                case "Player2":
+                    EndLevel(P2_ExitBackgroundImageCanvasGroup, false, exitAudio, targetPlayer);
+                    break;
+            }
+            
 
         }  
         else if(m_IsPlayerCaught)
         {
             
-            EndLevel (caughtBackgroundImageCanvasGroup, true, caughtAudio,targetPlayer);
+            switch (targetPlayer.name)
+            {
+                case "Player1":
+                    EndLevel(P1_CaughtBackgroundImageCanvasGroup, true, exitAudio, targetPlayer);
+                    break;
+                case "Player2":
+                    EndLevel(P2_CaughtBackgroundImageCanvasGroup, true, exitAudio, targetPlayer);
+                    break;
+            }
         }
         
         
@@ -69,6 +88,7 @@ public class GameEnding : MonoBehaviour
                 }
                 else
                 {
+
                     SceneManager.LoadScene(1);
 
                 }
@@ -76,8 +96,11 @@ public class GameEnding : MonoBehaviour
             }
             else
             {
-                Application.Quit();
-
+                if (SceneManager.GetActiveScene().buildIndex == 2)
+                {
+                    
+                }
+                
             }
 
         }

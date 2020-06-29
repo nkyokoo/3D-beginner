@@ -32,4 +32,10 @@ public class MenuScript : MonoBehaviour
     {
        Application.Quit();
     }
+
+   public void onRestartGame()
+   {
+       Time.timeScale = 1;
+       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex == 2 ? 2 : 1);
+   }
 }

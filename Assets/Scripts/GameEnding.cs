@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameEnding : MonoBehaviour
 {
     public float fadeDuration = 1f;
     public GameObject player;
     public GameObject player2;
-    public CanvasGroup P1_ExitBackgroundImageCanvasGroup;
+    public CanvasGroup ExitBackgroundImageCanvasGroup;
     public CanvasGroup P1_CaughtBackgroundImageCanvasGroup;
-    public CanvasGroup P2_ExitBackgroundImageCanvasGroup;
     public CanvasGroup P2_CaughtBackgroundImageCanvasGroup;
     public float displayImageDuration = 1f;
     public AudioSource exitAudio;
@@ -43,30 +43,27 @@ public class GameEnding : MonoBehaviour
     {
         if(m_IsPlayerAtExit)
         {
-            switch (targetPlayer.name)
-            {
-                case "Player1":
-                    EndLevel(P1_ExitBackgroundImageCanvasGroup, false, exitAudio, targetPlayer);
-                    break;
-                case "Player2":
-                    EndLevel(P2_ExitBackgroundImageCanvasGroup, false, exitAudio, targetPlayer);
-                    break;
-            }
+        
+            EndLevel(ExitBackgroundImageCanvasGroup, false, exitAudio, targetPlayer);
             
-
         }  
         else if(m_IsPlayerCaught)
         {
-            
-            switch (targetPlayer.name)
+
+
+            if (targetPlayer == player)
             {
-                case "Player1":
-                    EndLevel(P1_CaughtBackgroundImageCanvasGroup, true, exitAudio, targetPlayer);
-                    break;
-                case "Player2":
-                    EndLevel(P2_CaughtBackgroundImageCanvasGroup, true, exitAudio, targetPlayer);
-                    break;
+                EndLevel(P1_CaughtBackgroundImageCanvasGroup, true, exitAudio, targetPlayer);
+
             }
+            else if (targetPlayer == player2)
+            {
+                EndLevel(P2_CaughtBackgroundImageCanvasGroup, true, exitAudio, targetPlayer);
+
+            }
+              
+                  
+            
         }
         
         
@@ -97,8 +94,15 @@ public class GameEnding : MonoBehaviour
             else
             {
                 if (SceneManager.GetActiveScene().buildIndex == 2)
+                { 
+                    Time.timeScale = 0;
+                    GameObject Text = imageCanvasGroup.transform.Find("PlayerMessage").gameObject;
+                   Text.GetComponent<Text>().text = $"{targetPlayer.name} won!"; 
+
+                }
+                else
                 {
-                    
+                    Time.timeScale = 0;
                 }
                 
             }

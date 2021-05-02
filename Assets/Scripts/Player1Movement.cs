@@ -6,6 +6,7 @@ public class Player1Movement : MonoBehaviour
 {
     public float turnSpeed = 20f;
     public float thrust = 1.0f;
+    public float playerSpeed = 2.0f;
 
     Animator m_Animator;
     Rigidbody m_Rigidbody;
